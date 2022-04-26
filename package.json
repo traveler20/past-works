@@ -8,6 +8,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@vitejs/plugin-legacy": "^1.8.1",
+    "autoprefixer": "^10.4.5",
+    "postcss": "^8.4.12",
     "sass": "^1.50.1",
     "vite": "^2.9.5"
   }
