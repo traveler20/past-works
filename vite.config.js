@@ -75,7 +75,7 @@ const pageData = {
     isHome: true,
     title: "Main Page",
   },
-  "/list.html": {
+  "/about/index.html": {
     isHome: false,
     title: "List Page",
   },
@@ -132,7 +132,7 @@ export default defineConfig({
             extType = "fonts";
           }
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
-            extType = "images";
+            extType = "img";
           }
           //ビルド時のCSS名を明記してコントロールする
           if (extType === "css") {
