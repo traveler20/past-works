@@ -1,0 +1,213 @@
+/* ───────────────────────────────────────────── */
+/* variable */
+/* ───────────────────────────────────────────── */
+
+// CSS
+// ──────────────────────────────
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Roboto:wght@400;700&display=swap");
+
+// color system
+// ──────────────────────────────
+$c-white-1: #ffffff;
+$c-white-2: #fafafa;
+$c-black-1: #333333;
+$c-black-2: #15192c;
+$c-gray-10: #eff1f3;
+$c-gray-20: #e6e6e6;
+$c-gray-30: #d4dade;
+$c-gray-40: #a1acb4;
+$c-gray-50: #82919b;
+$c-gray-60: #637582;
+$c-gray-70: #586168;
+$c-gray-80: #45525b;
+$c-gray-90: #323b41;
+$c-gray-100: #1e2327;
+$c-orange-10: #fce1cd;
+$c-orange-20: #fad2b4;
+$c-orange-30: #f7b582;
+$c-orange-40: #ff9933;
+$c-orange-50: #fa8816;
+$c-orange-60: #ef6a04;
+$c-orange-70: #bf5503;
+$c-orange-80: #8f4002;
+$c-orange-90: #602a02;
+$c-orange-100: #301501;
+$c-yellow-10: #fffae6;
+$c-yellow-20: #fff5cc;
+$c-yellow-30: #ffeb99;
+$c-yellow-40: #ffd633;
+$c-yellow-50: #ffcc00;
+$c-yellow-60: #e6b800;
+$c-yellow-70: #b38f00;
+$c-yellow-80: #806600;
+$c-yellow-90: #4c3d00;
+$c-yellow-100: #191400;
+$c-beige-10: #fffef8;
+$c-beige-20: #faf8f2;
+$c-beige-30: #fcf8ec;
+$c-beige-40: #f2ecdc;
+$c-beige-50: #f3e4bb;
+$c-beige-60: #f0d692;
+$c-beige-70: #c0ab75;
+$c-beige-80: #908058;
+$c-beige-90: #60563a;
+$c-beige-100: #302b1d;
+$c-green-10: #e6f4f3;
+$c-green-20: #cce9e7;
+$c-green-30: #99d4cf;
+$c-green-40: #66beb8;
+$c-green-50: #2fc4b9;
+$c-green-60: #009388;
+$c-green-70: #00766d;
+$c-green-80: #005852;
+$c-green-90: #003b36;
+$c-green-100: #001d1b;
+$c-red-10: #fbecec;
+$c-red-20: #f4c7c5;
+$c-red-30: #eda29f;
+$c-red-40: #e67c79;
+$c-red-50: #e95550;
+$c-red-60: #db443f;
+$c-red-70: #af3632;
+$c-red-80: #832926;
+$c-red-90: #581b19;
+$c-red-100: #2c0e0d;
+$c-blue-10: #f2f7fa;
+$c-blue-20: #e7f3fa;
+$c-blue-50: #2f90f4;
+$c-blue-60: #006cd8;
+$c-blue-80: #004098;
+$c-blue-30: #cce2f7;
+$c-blue-40: #80b6ec;
+$c-blue-70: #0056ad;
+$c-blue-90: #00366c;
+$c-blue-100: #00162b;
+
+// ──────────────────────────────
+$c-base-white: $c-white-1;
+$c-base-primary: $c-gray-10;
+$c-body-black: $c-black-1;
+$c-body-gray: $c-gray-20;
+$c-body-sub: $c-gray-60;
+$c-primary-orange: $c-orange-60;
+$c-primary-hover: $c-orange-50;
+$c-secondary-yellow: $c-yellow-60;
+$c-secondary-hover: $c-yellow-50;
+$c-teritiary-red: $c-red-60;
+$c-teritiary-hover: $c-red-50;
+
+// ──────────────────────────────
+
+// z-index（グローバルなz-indexのみこちらで管理）
+// ──────────────────────────────
+@mixin z-index($z-index: 0) {
+  @if $z-index == header {
+    z-index: 2;
+  }
+  @if $z-index == modal {
+    z-index: 3;
+  }
+}
+
+// content max-width
+// ──────────────────────────────
+@mixin content-width($max-width: 1200px) {
+  @if $max-width == default {
+    max-width: 1200px;
+  }
+  @if $max-width == footer {
+    max-width: 1200px;
+  }
+  @if $max-width == header {
+    max-width: 1200px;
+  }
+  @if $max-width == gnavi {
+    max-width: 1160px;
+  }
+}
+
+// box-shadow
+// ──────────────────────────────
+@mixin box-shadow($shadow-type: default) {
+  @if $shadow-type == default {
+  }
+  @if $shadow-type == header {
+    box-shadow: 0 4px 4px rgba($color: $c-black-1, $alpha: 0.1);
+  }
+  @if $shadow-type == link {
+    box-shadow: 0 4px 4px rgba($color: $c-black-1, $alpha: 0.1);
+    transition: box-shadow 0.2s ease;
+    &:hover {
+      box-shadow: 0 16px 24px rgba($color: $c-black-1, $alpha: 0.1);
+    }
+  }
+}
+
+// border-radius
+// ──────────────────────────────
+@mixin border-radius($border-radius: default) {
+  @if $border-radius == default {
+  }
+  @if $border-radius == link {
+    border-radius: 12px;
+  }
+}
+
+// transition
+// ──────────────────────────────
+@mixin transition($transition: default) {
+  @if $transition == default {
+  }
+  @if $transition == link {
+    transition: all 0.4s;
+  }
+}
+
+// responsive system
+// ──────────────────────────────
+@mixin breakpoint($point) {
+  @if $point == xxl {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+  @if $point == xl {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  }
+  @if $point == lg {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+  @if $point == md {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $point == sm {
+    @media (max-width: 640px) {
+      @content;
+    }
+  }
+}
+
+@include breakpoint(xxl) {
+  .sp-only {
+    display: none;
+  }
+}
+@include breakpoint(xl) {
+  .sp-only {
+    display: none;
+  }
+}
+@include breakpoint(sm) {
+  .sp-only {
+    display: block;
+  }
+  .pc-only {
+    display: none;
+  }
+}

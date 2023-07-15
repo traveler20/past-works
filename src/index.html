@@ -3,19 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Viteで構築するWebサイト</title>
     <!-- CSSの読み込みを追加 -->
     <link rel="stylesheet" href="./scss/style.scss" />
   </head>
-  <body>
+  <body class="l-content-body">
     {{> header }}
 
-    <main>
+    <main class="l-content-main">
       <h1>{{title}}</h1>
       <p>hello</p>
-      <picture>
-        <img src="./public/assets/img/avatar.jpg" alt="" />
-      </picture>
+      <p>
+        <a href="./about/">ABOUT</a>
+      </p>
+      <div class="c-button-wrapper">
+        <a href="#url" class="c-button" data-type="primary" data-size="base"
+          >送信する</a
+        >
+        <a href="#url" class="c-button" data-type="primary" data-size="lg"
+          >送信する</a
+        >
+      </div>
+      <img
+        src="./public/assets/img/sample.png"
+        alt=""
+        width="200"
+        decoding="async"
+        loading="lazy"
+      />
     </main>
 
     {{> footer }}

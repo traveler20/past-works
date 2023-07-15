@@ -1,0 +1,99 @@
+/* ───────────────────────────────────────────── */
+/* .l-content */
+/* ───────────────────────────────────────────── */
+@use "./../foundation/variable" as *;
+@use "sass:math";
+
+// // .l-content
+// .l-content {
+//   display: grid;
+//   // header main footer
+//   grid-template-rows: auto 1fr auto;
+//   grid-template-columns: 100%;
+//   min-height: 100vh;
+// }
+
+.l-content-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.l-content-main {
+  flex: 1;
+}
+
+// .l-content-section
+.l-content-section {
+  padding: 64px 0;
+}
+.l-content-section__inner {
+  @include content-width(default);
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+// .l-content-column
+%l-content-column {
+  display: grid;
+  justify-content: center;
+  grid-gap: 16px 16px;
+}
+.l-content-column1,
+.l-content-column2,
+.l-content-column3,
+.l-content-column4,
+.l-content-column6,
+.l-content-column1--10,
+.l-content-column2--10,
+.l-content-column1--8,
+.l-content-column2--8 {
+  @extend %l-content-column;
+}
+.l-content-column1 {
+  grid-template-columns: repeat(auto-fit, math.div(1200px, 1) - 8px * 2);
+}
+.l-content-column2 {
+  grid-template-columns: repeat(auto-fit, math.div(1200px, 2) - 8px * 2);
+}
+.l-content-column3 {
+  grid-template-columns: repeat(auto-fit, math.div(1200px, 3) - 8px * 2);
+}
+.l-content-column4 {
+  grid-template-columns: repeat(auto-fit, math.div(1200px, 4) - 8px * 2);
+}
+.l-content-column6 {
+  grid-template-columns: repeat(auto-fit, math.div(1200px, 6) - 8px * 2);
+}
+.l-content-column1--10 {
+  grid-template-columns: repeat(auto-fit, math.div(984px, 1) - 8px * 2);
+}
+.l-content-column2--10 {
+  grid-template-columns: repeat(auto-fit, math.div(984px, 2) - 8px * 2);
+}
+.l-content-column1--8 {
+  grid-template-columns: repeat(auto-fit, math.div(784px, 1) - 8px * 2);
+}
+.l-content-column2--8 {
+  grid-template-columns: repeat(auto-fit, math.div(784px, 2) - 8px * 2);
+}
+
+@include breakpoint(pc) {
+}
+@include breakpoint(lg) {
+  %l-content-column {
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
+}
+@include breakpoint(sp) {
+}
+@include breakpoint(xl) {
+  .l-content-column1,
+  .l-content-column1--10 {
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
+}
+// @include breakpoint(lg) {
+//   .l-content-column3 {
+//     grid-template-columns: repeat(auto-fit, 100%);
+//   }
+// }

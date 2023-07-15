@@ -1,0 +1,150 @@
+/* ───────────────────────────────────────────── */
+/* utility */
+/* ───────────────────────────────────────────── */
+@use "./../../foundation/variable" as *;
+
+// spacing
+// ──────────────────────────────
+.mt-2 {
+  margin-top: 8px;
+}
+.mt-4 {
+  margin-top: 16px;
+}
+.mt-5 {
+  margin-top: 20px;
+}
+.mt-6 {
+  margin-top: 24px;
+}
+.mt-8 {
+  margin-top: 32px;
+}
+.mt-10 {
+  margin-top: 40px;
+}
+.mt-12 {
+  margin-top: 48px;
+}
+.mt-14 {
+  margin-top: 56px;
+}
+.mt-16 {
+  margin-top: 64px;
+}
+.mt-20 {
+  margin-top: 80px;
+}
+.mt-30 {
+  margin-top: 120px;
+}
+.mt-40 {
+  margin-top: 160px;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// font-size
+// ──────────────────────────────
+.text-sm {
+  font-size: 14px;
+  @include breakpoint(lg) {
+  }
+}
+.text-base {
+  font-size: 16px;
+  @include breakpoint(lg) {
+    font-size: 14px;
+  }
+}
+.text-lg {
+  font-size: 18px;
+  @include breakpoint(lg) {
+    font-size: 16px;
+  }
+}
+.text-xl {
+  font-size: 20px;
+  @include breakpoint(lg) {
+    font-size: 18px;
+  }
+}
+.text-2xl {
+  font-size: 24px;
+  @include breakpoint(lg) {
+    font-size: 20px;
+  }
+}
+.text-3xl {
+  font-size: 30px;
+  @include breakpoint(lg) {
+    font-size: 24px;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+.underline {
+  text-decoration: underline;
+}
+
+//
+.c-text-heading1 {
+  //   font-size: clamp(1.5rem, 1rem + 1.6vw, 2rem);
+  //   font-size: 28px;
+  //   font-size: 24px;
+  // font-size: clamp(1.5rem, 1.04rem + 1.6vw, 2rem); // 32px
+  // font-size: clamp(1.5rem, 1.27rem + 0.8vw, 1.75rem);
+  font-size: clamp(1.5rem, 0.81rem + 2.4vw, 2.25rem);
+  font-weight: bold;
+  line-height: 1.6;
+}
+.c-text-heading2 {
+  //   font-size: 24px;
+  //   font-size: 20px;
+  font-size: clamp(1.25rem, 1.02rem + 0.8vw, 1.5rem);
+  font-weight: bold;
+}
+.c-text-heading3 {
+  //   font-size: 20px;
+  //   font-size: 18px;
+  font-size: clamp(1.125rem, 1.01rem + 0.4vw, 1.25rem);
+  font-weight: bold;
+}
+.c-text-heading4 {
+  //   font-size: 18px;
+  //   font-size: 16px;
+  font-size: clamp(1rem, 0.885rem + 0.4vw, 1.125rem);
+  font-weight: bold;
+}
+
+//
+.c-list-ol {
+  padding-left: 20px;
+}
+.c-list-ol__list {
+  list-style-type: decimal;
+}
+
+//
+.w-full {
+  width: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+.inline-block {
+  display: inline-block;
+}

@@ -1,0 +1,22 @@
+/* ───────────────────────────────────────────── */
+/* .l-header */
+/* ───────────────────────────────────────────── */
+@use "./../foundation/variable" as *;
+
+.l-header {
+  width: 100%;
+
+  @include z-index(header);
+  @include box-shadow(header);
+
+  @include breakpoint(lg) {
+  }
+  @include breakpoint(sm) {
+  }
+}
+
+.l-header__inner {
+  @include content-width(header);
+  margin: 0 auto;
+  padding: 16px 8px;
+}

@@ -1,0 +1,51 @@
+/* ───────────────────────────────────────────── */
+/* .c-button */
+/* ───────────────────────────────────────────── */
+@use "./../../foundation/variable" as *;
+
+.c-button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+%c-button {
+  font-weight: bold;
+  line-height: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  @include box-shadow(link);
+  @include border-radius(link);
+  @include transition(link);
+
+  &[data-size="base"] {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+  &[data-size="lg"] {
+    font-size: 18px;
+    padding: 8px 20px;
+  }
+  &[data-size="xl"] {
+    font-size: 20px;
+    padding: 16px 24px;
+  }
+
+  &[data-type="primary"] {
+    color: #fff;
+    background-color: orange;
+    border: solid 4px orange;
+    &:hover {
+      background-color: orangered;
+      border-color: orangered;
+    }
+  }
+}
+
+.c-button {
+  @extend %c-button;
+}

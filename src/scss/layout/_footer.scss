@@ -1,0 +1,13 @@
+/* ───────────────────────────────────────────── */
+/* .l-footer */
+/* ───────────────────────────────────────────── */
+@use "./../foundation/variable" as *;
+
+.l-footer {
+  font-size: 14px;
+}
+.l-footer__inner {
+  @include content-width(footer);
+  margin: 0 auto;
+  padding: 20px 8px;
+}
